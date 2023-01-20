@@ -19,12 +19,16 @@ describe("validations tests suites - isEmpty", () => {
 
 describe("validations tests suites - isValid", () => {
     test("should return true  with a valid tag name", () => {
-        const result = isValid("aaaaaaaa.8");
+        const result = isValid("aaaaaaaa8");
         expect(result).toBe(true);
     });
     
     test("should return false  with a tag name that has less then 8 carachter", () => {
         const result = isValid("aaaaaa.8");
+        expect(result).toBe(false);
+    });
+    test("should return false  with a tag name that has more then 8 carachter but no number", () => {
+        const result = isValid("aaaaaaaaaa");
         expect(result).toBe(false);
     });
 });

@@ -5,7 +5,7 @@ const isEmpty = (label) => !label || label.length === 0;
 function isValid(name) {
 
 
-return /^[a-zA-Z0-9]{8,}/.test(name);
+return /^[a-zA-Z]{8,}[1-9]{1,}/.test(name);
     
     
 }

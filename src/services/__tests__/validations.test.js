@@ -1,4 +1,4 @@
-const { isEmpty,isValid } = require("../validations");
+const { isEmpty, isValid } = require("../validations");
 
 describe("validations tests suites - isEmpty", () => {
     test("should return true as the label is undefined", () => {
@@ -22,7 +22,7 @@ describe("validations tests suites - isValid", () => {
         const result = isValid("mlm");
         expect(result).toBe(false);
     });
-    
+
     test("should return false  with a tag name that has less then 8 carachter", () => {
         const result = isValid("aaaaaa.8");
         expect(result).toBe(false);
@@ -31,7 +31,7 @@ describe("validations tests suites - isValid", () => {
         const result = isValid("aaaaaaaaaa");
         expect(result).toBe(false);
     });
-    test("should return false  with a tag name that has more then 8 carachter has a number but no special carcteres like theses ^;.,_ ",() => {
+    test("should return false  with a tag name that has more then 8 carachter has a number but no special carcteres like theses ^;.,_ ", () => {
         const result = isValid("aaaaaaaaaa8");
         expect(result).toBe(false);
     });

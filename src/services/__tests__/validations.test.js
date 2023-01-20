@@ -35,7 +35,10 @@ describe("validations tests suites - isValid", () => {
         const result = isValid("aaaaaaaaaa8");
         expect(result).toBe(false);
     });
-
+    test("should return true  with a valid tag name", () => {
+        const result = isValid("aaaaaaaab12.;");
+        expect(result).toBe(true);
+    });
 });
 
 // TODO: Create tests suite for validation function

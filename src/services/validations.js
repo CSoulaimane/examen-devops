@@ -3,7 +3,11 @@
 const isEmpty = (label) => !label || label.length === 0;
 
 function isValid(name) {
-    return true;
+
+
+return /^[a-zA-Z0-9]{8,}/.test(name);
+    
+    
 }
 
 exports.isEmpty = isEmpty;

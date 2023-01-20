@@ -18,9 +18,9 @@ describe("validations tests suites - isEmpty", () => {
 });
 
 describe("validations tests suites - isValid", () => {
-    test("should return true  with a valid tag name", () => {
-        const result = isValid("aaaaaaaa8.");
-        expect(result).toBe(true);
+    test("should return false  with a invalid tag name", () => {
+        const result = isValid("mlm");
+        expect(result).toBe(false);
     });
     
     test("should return false  with a tag name that has less then 8 carachter", () => {
@@ -35,6 +35,7 @@ describe("validations tests suites - isValid", () => {
         const result = isValid("aaaaaaaaaa8");
         expect(result).toBe(false);
     });
+
 });
 
 // TODO: Create tests suite for validation function

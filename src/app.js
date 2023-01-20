@@ -10,7 +10,7 @@ try {
 
     gamerTagInput.addEventListener("change", (event) => {
         gamerTagValue = event.target.value;
-        console.log(gamerTagValue,"icic");
+        console.log(gamerTagValue, "icic");
     });
 
     checkButton.addEventListener("click", () => {
@@ -19,7 +19,8 @@ try {
             : "Gamer tag is valid";
 
         if (isValid(gamerTagValue) === false) {
-            feedbackMessageText = "Gamer tag must contains at least 8 caracters , 1 number and 1 special caracters";
+            feedbackMessageText =
+                "Gamer tag must contains at least 8 caracters , 1 number and 1 special caracters";
         }
         feedbackMessage.textContent = feedbackMessageText;
     });
